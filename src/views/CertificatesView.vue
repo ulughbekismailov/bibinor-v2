@@ -32,7 +32,7 @@
             <div class="cert-card-left">
               <!-- <div class="cert-emblem">{{ cert.emblem }}</div> -->
               <img :src="cert.image" alt="">
-              <div :style="{ color: cert.color }" class="cert-name-large">{{ cert.name }}</div>
+              <!-- <div :style="{ color: cert.color }" class="cert-name-large">{{ cert.name }}</div> -->
             </div>
             <div class="cert-card-right">
               <div class="section-label">{{ cert.label }}</div>
