@@ -21,10 +21,12 @@
         </h1>
         <p class="hero-desc">
           Более 25 лет BIBINOR создаёт высококачественные ветеринарные препараты,<br />
-          сертифицированные по международным стандартам GMP и Halal.
+          сертифицированные по международным стандартам GMP и Halal. <br/>
+
+          Наш партнёр по лабораторным исследованиям:
         </p>
         <div class="hero-actions">
-          <RouterLink to="/products" class="btn-primary">Наши препараты</RouterLink>
+          <a href="https://absd-uz.vercel.app" class="btn-primary">Наш партнёр</a>
           <RouterLink to="/about" class="btn-outline">О компании</RouterLink>
         </div>
       </div>
@@ -60,10 +62,10 @@
         <div class="about-grid">
           <div class="about-images">
             <div class="img-main">
-              <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=700&q=80" alt="Лаборатория" />
+              <img src="https://data.daryo.uz/media/2019/09/photo_2019-08-31_16-44-13.jpg" alt="Лаборатория" />
             </div>
             <div class="img-secondary">
-              <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=400&q=80" alt="Животные" />
+              <img src="https://images.oxu.az/2016/12/08/12/02/14/558/UTT8625:1200.jpg" alt="Животные" />
               <div class="years-badge">
                 <span class="years-num">25+</span>
                 <span class="years-txt">лет<br/>опыта</span>
@@ -90,7 +92,6 @@
       </div>
     </section>
 
-    <!-- PRODUCTS -->
     <section class="products-section">
       <div class="container">
         <div class="section-header">
@@ -107,17 +108,13 @@
             :to="`/products/${p.id}`"
             class="product-card"
           >
-            <div class="card-top" :style="{ background: p.color }">
-              <div class="card-icon">{{ p.icon }}</div>
-              <div class="card-category">{{ p.category }}</div>
-              <div v-if="p.badge" class="card-badge">{{ p.badge }}</div>
+            <!-- Rasmli blok -->
+            <div class="product-image">
+              <img :src="p.image" :alt="p.name" />
             </div>
             <div class="card-body">
               <h3>{{ p.name }}</h3>
               <p>{{ p.subtitle }}</p>
-              <div class="card-animals">
-                <span v-for="a in p.animals.slice(0, 2)" :key="a">{{ a }}</span>
-              </div>
               <div class="card-arrow">Подробнее →</div>
             </div>
           </RouterLink>
@@ -137,8 +134,9 @@
           </div>
           <div class="certs-cards">
             <div class="cert-card" v-for="c in certs" :key="c.name">
-              <div class="cert-icon">{{ c.icon }}</div>
-              <div class="cert-name">{{ c.name }}</div>
+              <!-- <div class="cert-icon">{{ c.icon }}</div> -->
+               <img style="width: 68px;" :src="c.image" alt="">
+              <!-- <div class="cert-name">{{ c.name }}</div> -->
               <div class="cert-desc">{{ c.desc }}</div>
             </div>
           </div>
@@ -215,15 +213,30 @@ const stats = [
 ]
 
 const advantages = [
-  { icon: '🏭', title: 'Собственное производство', text: 'Полный цикл производства на современном заводе' },
-  { icon: '🔬', title: 'Научная база', text: 'Препараты разработаны ведущими специалистами' },
-  { icon: '✅', title: 'Государственная регистрация', text: 'Все препараты прошли официальную регистрацию' },
+  { icon: '', title: 'Собственное производство', text: 'Полный цикл производства на современном заводе' },
+  { icon: '', title: 'Научная база', text: 'Препараты разработаны ведущими специалистами' },
+  { icon: '', title: 'Государственная регистрация', text: 'Все препараты прошли официальную регистрацию' },
 ]
 
 const certs = [
-  { icon: '🏆', name: 'GMP', desc: 'Международный стандарт надлежащей производственной практики' },
-  { icon: '☪️', name: 'HALAL', desc: 'Сертификат соответствия исламским стандартам качества' },
-  { icon: '📋', name: 'ISO', desc: 'Международный стандарт системы менеджмента качества' },
+  {
+    icon: '🏆',
+    name: 'GMP',
+    desc: 'Международный стандарт надлежащей производственной практики',
+    image: '/images/GMP.webp'
+  },
+  {
+    icon: '☪️',
+    name: 'HALAL',
+    desc: 'Сертификат соответствия исламским стандартам качества',
+    image: '/images/Halal.webp'
+  },
+  {
+    icon: '📋',
+    name: 'ISO',
+    desc: 'Международный стандарт системы менеджмента качества',
+    image: '/images/ISO.webp'
+  },
 ]
 
 const animalTypes = [

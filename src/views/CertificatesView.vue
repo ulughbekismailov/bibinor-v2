@@ -2,7 +2,7 @@
   <div class="certs-page">
 
     <section class="page-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?w=1400&q=80')"></div>
+      <div class="hero-bg" style="background-image: url('https://i.pinimg.com/originals/b4/86/76/b48676d21931e29ecc50a5960f8857c0.jpg')"></div>
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="page-hero-content">
@@ -29,9 +29,10 @@
       <div class="container">
         <div class="certs-grid">
           <div class="cert-card-large" v-for="cert in certs" :key="cert.name">
-            <div class="cert-card-left" :style="{ background: cert.color }">
-              <div class="cert-emblem">{{ cert.emblem }}</div>
-              <div class="cert-name-large">{{ cert.name }}</div>
+            <div class="cert-card-left">
+              <!-- <div class="cert-emblem">{{ cert.emblem }}</div> -->
+              <img :src="cert.image" alt="">
+              <div :style="{ color: cert.color }" class="cert-name-large">{{ cert.name }}</div>
             </div>
             <div class="cert-card-right">
               <div class="section-label">{{ cert.label }}</div>
@@ -80,6 +81,7 @@ const certs = [
   {
     name: 'GMP',
     emblem: '🏆',
+    image: '/images/GMP.webp',
     label: 'Производственный стандарт',
     title: 'Good Manufacturing Practice — Надлежащая производственная практика',
     color: 'var(--navy)',
@@ -95,6 +97,7 @@ const certs = [
   {
     name: 'HALAL',
     emblem: '☪️',
+    image: '/images/Halal.webp',
     label: 'Исламский стандарт',
     title: 'Halal — Соответствие исламским требованиям',
     color: '#1a4a2a',
@@ -110,6 +113,7 @@ const certs = [
   {
     name: 'ISO',
     emblem: '📋',
+    image: '/images/ISO.webp',
     label: 'Системный стандарт',
     title: 'ISO — Международная стандартизация системы менеджмента',
     color: '#1a2a4a',

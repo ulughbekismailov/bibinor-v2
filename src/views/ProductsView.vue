@@ -2,7 +2,7 @@
   <div class="products-page">
 
     <section class="page-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=1400&q=80')"></div>
+      <div class="hero-bg" style="background-image: url('https://storage.myseldon.com/news-pict-d0/D04F1DAC909A2D318C17C61A81E6FB78')"></div>
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="page-hero-content">

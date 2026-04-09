@@ -3,7 +3,7 @@
 
     <!-- PAGE HERO -->
     <section class="page-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=1400&q=80')"></div>
+      <div class="hero-bg" style="background-image: url('https://avatars.mds.yandex.net/get-altay/14381528/2a000001946045a1cae6e4ffc1c15a08718f/orig')"></div>
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="page-hero-content">
@@ -114,7 +114,7 @@
         <!-- FACTORY STATS -->
         <div class="factory-stats">
           <div class="fstat" v-for="s in factoryStats" :key="s.label">
-            <div class="fstat-icon">{{ s.icon }}</div>
+            <!-- <div class="fstat-icon">{{ s.icon }}</div> -->
             <div class="fstat-num">{{ s.num }}</div>
             <div class="fstat-label">{{ s.label }}</div>
           </div>

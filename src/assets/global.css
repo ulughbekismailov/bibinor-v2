@@ -1,7 +1,7 @@
 :root {
-  --navy: #2b2b8f;
-  --navy-light: #33339a;
-  --navy-mid: #3d3daa;
+  --navy: #303071;
+  --navy-light: #5656c6;
+  --navy-mid: #3e3e81;
   --gold: #e8b84b;
   --gold-light: #f5d07a;
   --gold-dark: #c49a28;
@@ -9,7 +9,7 @@
   --off-white: #f4f4fb;
   --gray: #7a7a9a;
   --light-gray: #e4e4f0;
-  --text-dark: #1a1a5e;
+  --text-dark: #28284a;
   --text-body: #3a3a6a;
 }
 
